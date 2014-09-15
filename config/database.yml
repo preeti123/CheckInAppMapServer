@@ -1,0 +1,27 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+
+common: &common
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  <% if File.exist?('/tmp/mysql.sock') %>
+  socket: /tmp/mysql.sock
+  <% end %>
+  password:
+
+development: &development
+  database: socialmap_development
+  <<: *common
+
+test: &test
+  database: socialmap_test
+  <<: *common
+
+production:
+  database: socialmap_production
+  <<: *common
