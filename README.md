@@ -22,10 +22,8 @@ This is a backend service which persists users checkin at location, and also ret
  
  
  <h2> Implementaion</h2>
- The backend service is mainted in Ruby On Rails. The API's are used by the client to cerate a new checking and to show
- existing checkins. 
- ==================
- 
+ The backend service is mainted in Ruby On Rails. The API's are used by the client to cerate a new checking and to show existing checkins. 
+ <br>
  The create API is a POST request with params
  <br>
  {
