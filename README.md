@@ -24,6 +24,7 @@ This is a backend service which persists users checkin at location, and returns 
  <h2> Implementaion</h2>
  The backend service is mainted in Ruby On Rails. The API's are used by the client to cerate a new checking and to show
  existing checkins. 
+ ============================
  The create API is a POST request with params
  {
    'lat' => latitude of location being checked in,
@@ -31,9 +32,9 @@ This is a backend service which persists users checkin at location, and returns 
    'category' => Food/drinks/events/deals,
    'extra_text' => Some misc text
  }
+ ==========================================
  
  The show API is a GET request with params
- </br>
  {
   'min_lat' => the minimum latitude degree for zoom level of user,
   'max_lat' => the maximum latitude degree for zoom level of user,
