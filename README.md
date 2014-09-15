@@ -83,3 +83,19 @@ This is a backend service which persists users checkin at location, and returns 
   </ol>
   
   <h2> curl requests for the API's</h2>
+  <ol>
+  <li> To checkin a user's ativity in current location
+   Request : curl -X POST 'http://localhost:3000/checkins' --data "lat=1.2&lon=1.2&text='aoeuaoeuaoeuaoeu'&category=food"
+{"social_map":{"id":5,"lat":1.2,"lon":1.2,"text":"'aoeuaoeuaoeuaoeu'","category":"food"}}
+
+Response:
+<br>
+{"social_map":{"id":5,"lat":1.2,"lon":1.2,"text":"'aoeuaoeuaoeuaoeu'","category":"food"}}
+
+<li> Get all checkins for category.
+Request: curl -X GET 'http://localhost:3000/checkins' --data 'min_lat=1.2&max_lat=1.4&min_lon=1.2&max_lon=1.7&category=food'
+
+Response:
+<br>
+{"social_map":[{"id":5,"lat":1.2,"lon":1.2,"text":"'aoeuaoeuaoeuaoeu'","category":"food"}]}
+  </ol>
