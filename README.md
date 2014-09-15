@@ -24,23 +24,37 @@ This is a backend service which persists users checkin at location, and returns 
  <h2> Implementaion</h2>
  The backend service is mainted in Ruby On Rails. The API's are used by the client to cerate a new checking and to show
  existing checkins. 
- ============================
+ ==================
+ 
  The create API is a POST request with params
+ <br>
  {
+ <br>
    'lat' => latitude of location being checked in,
+   <br>
    'long' =>longitude of location ebing checked in,
+   <br>
    'category' => Food/drinks/events/deals,
+   <br>
    'extra_text' => Some misc text
+   <br>
  }
- ==========================================
+ <br>
  
  The show API is a GET request with params
+ <br>
  {
+ <br>
   'min_lat' => the minimum latitude degree for zoom level of user,
+  <br>
   'max_lat' => the maximum latitude degree for zoom level of user,
+  <br>
   'min_long' => the minimum longitude degree for zoom level of user,
+  <br>
   'max_long'=> the maximum longitude degree for zoom level of user,
+  <br>
   'category' => the category for which checkin count is needed
+  <br>
  }
  
  This API returns all the checkins that belong fit within the above lat long range
@@ -48,6 +62,7 @@ This is a backend service which persists users checkin at location, and returns 
  <h2> Database Schema</h2>
  For now the app is simple with just a table for the checkins.
  This table has the following columns:
+ <br>
   `id`,
   `latitude`,
   `longitude`,
@@ -63,4 +78,8 @@ This is a backend service which persists users checkin at location, and returns 
   <li> git clone project
   <li> cd social_map_new
   <li> bundle install
+  <li> bundle exec rake db:migrate
+  <li>rails server
   </ol>
+  
+  <h2> curl requests for the API's</h2>
