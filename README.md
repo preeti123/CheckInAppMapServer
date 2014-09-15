@@ -3,7 +3,7 @@ CheckInAppMapServer
 
 <h2> Summary </h2>
 
-Checkin app is a mobile app, used to shows users the different activities happening at a location based on popularity.
+Checkin app is a mobile app, used for showing users the various activities happening at a location based on popularity.
 
 Checkin App can be used by users for two reasons:
 <ol>
@@ -11,7 +11,7 @@ Checkin App can be used by users for two reasons:
 <li> User wants to know the different activities happening at a location</li>
 </ol>
 
-This is a backend service which persists users checkin at location, and returns list of activities happening at a location based on user request.
+This is a backend service which persists users checkin at location, and also returns list of activities happening at a location based on user request.
 
 
 <h2> Scope </h2>
