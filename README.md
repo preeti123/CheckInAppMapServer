@@ -33,6 +33,7 @@ This is a backend service which persists users checkin at location, and returns 
  }
  
  The show API is a GET request with params
+ <\br>
  {
   'min_lat' => the minimum latitude degree for zoom level of user,
   'max_lat' => the maximum latitude degree for zoom level of user,
